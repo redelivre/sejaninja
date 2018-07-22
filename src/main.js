@@ -143,7 +143,7 @@ function initWebsocket () {
             id: cur.uid,
             roleColor: '#' + hashCode(cur.uid)
         }
-      }, acc))),
+      }, acc)), {}),
       request: {}
     }
   }
