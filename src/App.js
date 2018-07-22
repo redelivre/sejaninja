@@ -73,7 +73,7 @@ const SendData = ({next, args}) => {
   const url = `https://docs.google.com/forms/d/14F27ai-E3gaBKR3ca2KFcLiU-wrBEE8wDrsAoNa328o/viewform?${params}`
   return (
     <h1>VALEU <em>{name}</em> de <em>{city}</em>, favor de
-      <button className='pink' onClick={window.open(url)}>
+      <button className='pink' onClick={() => window.open(url)}>
           Confirmar
     </button>
     </h1>
