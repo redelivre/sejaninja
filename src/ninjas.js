@@ -1,6 +1,6 @@
 module.exports = [
-    {uid: 'brancaschulz', name: 'Cláudia Schulz',says:'Vamos baixar um csv e fazer o relatório'}, 
-    {uid: 'PabloCapile ', name: 'Pablo Capilé', says: 'Somos a onda'},
+    {uid: 'brancaschulz', name: 'Cláudia Schulz', says:'Vamos baixar um csv e fazer o relatório'},
+    {uid: 'PabloCapile', name: 'Pablo Capilé', says: 'Somos a onda'},
     {uid: 'MarielleRamires', name: 'Marielle Ramires',says: 'Tempo é materia prima da economia colaborativa!'},
     {uid: 'LenissaLenza', name: 'Lenissa LenzaCampos', says:'buscando sempre a felicidade interna bruta'},
     {uid: 'caroltokuyo', name: 'carol tokuyo', says: 'Cultura de Red!'},
@@ -10,7 +10,7 @@ module.exports = [
     {uid: 'louakemis', name: 'Louise Akemi', says: 'estamos em estado permanente de edital!'},
     {uid: 'TallesLopes', name: 'Talles Lopes', says: 'O Toque no Brasil é a rede social da música'},
     {uid: 'Irlanacassini', name: 'Irlana Cassini' , says: 'vida coletiva!'},
-    {uid: 'edvamfilho_ ', name: 'Edvam Filho' , says: 'Oxe!'},
+    {uid: 'edvamfilho_', name: 'Edvam Filho' , says: 'Oxe!'},
     {uid: 'claytonnobre', name: 'Clayton Nobre' , says: 'Tamo tudo organizado pra fazer a Revolução'},
     {uid: 'biancarlima', name: 'Bianca Lima', says: 'utopicamente vivendo'},
     {uid: 'thaneemendes', name: 'Thanee Degasperi', says: 'o céu é o limite'},
