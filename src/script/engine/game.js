@@ -127,7 +127,7 @@ Game.prototype.mousemove = function (mouseEvent) {
 
 Game.prototype.mousedown = function (mouseEvent) {
   if (this.mouseOver) {
-      window.open('http://twitter.com/' + this.mouseOver.uid)
+      window.open(this.mouseOver.link)
     console.log(this.mouseOver)
     window.actor = this.mouseOver
   }
