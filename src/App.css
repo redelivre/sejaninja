@@ -27,8 +27,8 @@ body {
 }
 
 #hero img {
-    width: 50vmax;
-    height: 50vmax;
+    width: 50%;
+    height: 50%;
     position: fixed;
     top: 10vh;
     left: -10vw;
