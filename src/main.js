@@ -111,7 +111,7 @@ function initWebsocket () {
         [cur.uid]: {
           username: '@' + cur.uid,
           id: cur.uid,
-          link: 'https://twitter.com/' + cur.uid,
+          link: cur.link,
           roleColor: '#' + hashCode(cur.uid)
         }
       }, acc)), {}),
