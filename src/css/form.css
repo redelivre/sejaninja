@@ -234,6 +234,7 @@ input:focus::-ms-input-placeholder {
 	font-size: 40%;
 	font-weight: bold;
 	letter-spacing: 3px;
+    float: right;
 }
 
 .nl-submit:before {
