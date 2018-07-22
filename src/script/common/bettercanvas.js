@@ -18,7 +18,8 @@ BetterCanvas.prototype.drawImage = function (img, sx, sy, sw, sh, dx, dy, dw, dh
   if (!img || !(sx >= 0) || !(sy >= 0) || !(sw >= 0) || !(sh >= 0) ||
         !isNumeric(dx) || !isNumeric(dy) || !(dw >= 0) || !(dh >= 0)) {
     console.error('bad drawImage params!', img, sx, sy, sw, sh, dx, dy, dw, dh)
-    window.pause()
+      //window.pause()
+      return
   }
   if (opacity) {
     this.context.save()
@@ -42,7 +43,8 @@ BetterCanvas.prototype.clear = function () {
 BetterCanvas.prototype.fillRect = function (color, x, y, w, h) {
   if (!isNumeric(x) || !isNumeric(y) || !isNumeric(w) || !isNumeric(h)) {
     console.error('bad fillRect params!', color, x, y, w, h)
-    window.pause()
+//    window.pause()
+      return
   }
   this.context.fillStyle = color
   this.context.fillRect(Math.round(x), Math.round(y), Math.round(w), Math.round(h))
@@ -51,7 +53,8 @@ BetterCanvas.prototype.fillRect = function (color, x, y, w, h) {
 BetterCanvas.prototype.clearRect = function (x, y, w, h) {
   if (!isNumeric(x) || !isNumeric(y) || !isNumeric(w) || !isNumeric(h)) {
     console.error('bad clearRect params!', x, y, w, h)
-    window.pause()
+      //window.pause()
+      return
   }
   this.context.clearRect(Math.round(x), Math.round(y), Math.round(w), Math.round(h))
 }
