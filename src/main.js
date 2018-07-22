@@ -129,8 +129,9 @@ function initWebsocket () {
     }
   }
 
-  const hashCode = (s) => s.split("")
-        .reduce((a,b) => {a=((a<<2)-a)+b.charCodeAt(0);return a&a},0)
+  const hashCode = (s) => (
+      s.split("")
+          .reduce((a,b) => {a=((a<<2)-a)+b.charCodeAt(0);return a&a},0)%0xffffff)
         .toString(16).padStart(6, '0')
 
   const mockData = {
