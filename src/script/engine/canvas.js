@@ -128,7 +128,7 @@ Canvas.prototype.draw = function () {
   this.context.fillStyle = '#d4cfb6'
   this.context.font = '14px Arial'
   this.context.textAlign = 'center'
-  this.context.fillText('connecting...', Math.round(this.width / 2), Math.round(this.height / 2 - 4))
+  this.context.fillText('may the NINJA be with you…', Math.round(this.width / 2), Math.round(this.height / 2 - 4))
 }
 
 Canvas.prototype.drawStatic = function (staticCanvas) {
