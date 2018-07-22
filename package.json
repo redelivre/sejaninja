@@ -1,0 +1,23 @@
+{
+  "name": "seja.midianinja.org",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "browser-storage": "^0.0.2",
+    "react": "^16.4.1",
+    "react-autocomplete": "^1.8.1",
+    "react-dom": "^16.4.1",
+    "react-eureka": "^1.0.5",
+    "react-scripts": "1.1.4",
+    "websocket-stream": "^5.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1"
+  }
+}
