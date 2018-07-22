@@ -62,7 +62,6 @@ Beacon.prototype.onUpdate = function () {
         mouse.x <  metrics.w + metrics.ox &&
         mouse.y >=  metrics.oy &&
         mouse.y <  metrics.h + metrics.oy) {
-      console.log('mouse over', this)
     this.game.mouseOver = this
   } else if (this.game.mouseOver === this) {
     this.game.mouseOver = false
