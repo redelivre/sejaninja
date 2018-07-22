@@ -14,7 +14,7 @@ function Beacon (x, y, z) {
     height: 2.5
   })
   // console.log('beacon:',this.position);
-  this.link = "https://telegram.org"
+  this.link = 'https://telegram.org'
   this.unWalkable = true
   var self = this
   this.on('draw', function (canvas) {
@@ -58,10 +58,10 @@ Beacon.prototype.onUpdate = function () {
     y: this.game.centerMouseY - this.game.renderer.canvases[0].panning.panned.y
   }
   var metrics = this.sheet.map.main
-  if (mouse.x >=  metrics.ox &&
-        mouse.x <  metrics.w + metrics.ox &&
-        mouse.y >=  metrics.oy &&
-        mouse.y <  metrics.h + metrics.oy) {
+  if (mouse.x >= metrics.ox &&
+        mouse.x < metrics.w + metrics.ox &&
+        mouse.y >= metrics.oy &&
+        mouse.y < metrics.h + metrics.oy) {
     this.game.mouseOver = this
   } else if (this.game.mouseOver === this) {
     this.game.mouseOver = false

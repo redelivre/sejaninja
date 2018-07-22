@@ -3,13 +3,12 @@ var BetterCanvas = require('./../common/bettercanvas.js')
 
 module.exports = Preloader
 
-
 var imageList = {
-    actors: require ('./../../img/actors.png'),
-    environment: require ('./../../img/environment.png'),
-    'static-tiles': require ('./../../img/static-tiles.png'),
-    props: require ('./../../img/props.png'),
-    font: require ('./../../img/font.png')
+  actors: require('./../../img/actors.png'),
+  environment: require('./../../img/environment.png'),
+  'static-tiles': require('./../../img/static-tiles.png'),
+  props: require('./../../img/props.png'),
+  font: require('./../../img/font.png')
 }
 
 const imageCount = Object.keys(imageList).length
@@ -20,12 +19,12 @@ function Preloader (onComplete) {
   this.onComplete = onComplete
   Object.entries(imageList).map(e => {
     const name = e[0]
-    const uri  = e[1]
+    const uri = e[1]
 
     var image = new Image()
     image.addEventListener('load', this.onImageLoad.bind(this, image, name))
     image.src = uri
-    //if (image.complete) this.onImageLoad(image, name)
+    // if (image.complete) this.onImageLoad(image, name)
   })
 }
 

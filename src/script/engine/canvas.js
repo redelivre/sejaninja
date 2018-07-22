@@ -180,10 +180,10 @@ Canvas.prototype.drawEntity = function (sprite) {
         screen.x + sprite.metrics.w <= 0 || screen.y + sprite.metrics.h <= 0) return
   var image = sprite.image.constructor === Array ? this.images[sprite.image[0]][sprite.image[1]]
     : (this.images[sprite.image] || sprite.image)
-   var highlight = (sprite === this.game.mouseOver.sprite ? 'rgba(255,255,255,1)'
-                    : sprite === this.game.talking ? 'rgba(255,0,0,1)' : false)
+  var highlight = (sprite === this.game.mouseOver.sprite ? 'rgba(255,255,255,1)'
+    : sprite === this.game.talking ? 'rgba(255,0,0,1)' : false)
 
-   if (highlight) {
+  if (highlight) {
     this.context.save()
     this.context.shadowColor = highlight
     this.context.shadowBlur = 3
