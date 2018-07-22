@@ -24,6 +24,7 @@ function Actor (options) {
   this.username = options.username
   this.nametag = new TextBox(this, this.username)
   this.nametag.blotText()
+  this.link = options.link
   this.sheet = new Sheet('actor')
   this.sprite.image = 'actors'
   this.presence = 'offline'

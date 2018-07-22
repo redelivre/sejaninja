@@ -24,6 +24,7 @@ Users.prototype.addActor = function (data) {
     z: 0,
     uid: data.id,
     username: data.username,
+    link: data.link,
     roleColor: data.roleColor,
     maxListeners: this._maxListeners + 3
   })
