@@ -133,8 +133,8 @@ function initWebsocket () {
   const mockData = {
     type: 'server-join',
     data: {
-      users: Object.entries(ninjas).reduce((acc, cur) => (Object.assign({
-        [cur[0]]: {username: '@' + cur[0]}
+      users: ninjas.reduce((acc, cur) => (Object.assign({
+        [cur.uid]: {username: '@' + cur.uid, id: cur.uid}
       }, acc))),
       request: {}
     }
