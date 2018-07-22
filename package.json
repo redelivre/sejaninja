@@ -2,8 +2,10 @@
   "name": "seja.midianinja.org",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://foradoeixo.github.io/sejaninja",
   "dependencies": {
     "browser-storage": "^0.0.2",
+    "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-autocomplete": "^1.8.1",
     "react-dom": "^16.4.1",
@@ -15,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "standard": "^11.0.1"
