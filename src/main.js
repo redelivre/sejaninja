@@ -129,12 +129,19 @@ function initWebsocket () {
     }
   }
 
-  let i = 100
+  const hashCode = (s) => s.split("")
+        .reduce((a,b) => {a=((a<<2)-a)+b.charCodeAt(0);return a&a},0)
+        .toString(16).padStart(6, '0')
+
   const mockData = {
     type: 'server-join',
     data: {
       users: ninjas.reduce((acc, cur) => (Object.assign({
-        [cur.uid]: {username: '@' + cur.uid, id: cur.uid}
+        [cur.uid]: {
+            username: '@' + cur.uid,
+            id: cur.uid,
+            roleColor: '#' + hashCode(cur.uid)
+        }
       }, acc))),
       request: {}
     }
