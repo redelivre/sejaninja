@@ -22,28 +22,29 @@ const questions = [
 
 
 class Stepper extends React.PureComponent {
-    constructor () {
-        super()
-        this.state = {
-            step: 0
-        }
+  constructor () {
+    super()
+    this.state = {
+      step: 0
     }
+  }
 
-    render () {
-        const {children} = this.props
-        const {step} = this.state
+  render () {
+    const {children} = this.props
+    const {step, args} = this.state
 
-        const clonedChild = React.Children.map(
-            children, (child, i) => i === step ? React.cloneElement(child, {
-                next: () => (this.setState({step: step + 1}))
-            }): null).filter(a => a)
+    const clonedChild = React.Children.map(
+      children, (child, i) => i === step ? React.cloneElement(child, {
+        args,
+        next: (...args) => (this.setState({step: step + 1, args: args}))
+      }) : null).filter(a => a)
 
-        return (
-            <div>
-                {clonedChild}
-            </div>
-        )
-    }
+    return (
+      <div>
+        {clonedChild}
+      </div>
+    )
+  }
 }
 
 const FormWrapper = ({next, ...props}) => (
