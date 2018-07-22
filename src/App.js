@@ -131,14 +131,14 @@ const Form = ({children, onSubmit}) => (
 
 const Register = ({next}) => (
     <Form onSubmit={next}>
-        <p>
+        <div>
             Meu nome é <Input placeholder="Diego Maradona" subline="Como te chaman en el bairro ?"/>,
     sou de <Input placeholder="São Paulo/RJ" subline="so tipar e completamos"/> e quero colaborar na parte do
     <Selector options={areas}/>. Para entrar em contato comigo basta mandar um e-mail para
     <Input type="email" placeholder="diego@afa.org.ar" subline="Prometemos no mandar spam"/> ou ligar para 
     <Input type="tel" placeholder="+552983402989" subline="No mandamos nudes sin que nos pidan"/>
     
-        </p>
+        </div>
         <Submit>Pronto !</Submit>
     </Form>
 )
