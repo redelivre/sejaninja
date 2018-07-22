@@ -15,7 +15,7 @@ module.exports = [
     {uid: 'biancarlima', name: 'Bianca Lima', says: 'utopicamente vivendo'},
     {uid: 'thaneemendes', name: 'Thanee Degasperi', says: 'o céu é o limite'},
     {uid: 'zasssmine', name: 'Jasmine giovannine', says: "Gandaie-se"},
-    {uid: 'xaiki', name: 'Niv Sardi', says:'É softwarelivre, caraaaaaa!'}, 
+    {uid: 'xaiki', name: 'Niv Sardi', says:'É softwarelivre, caaaaara!'},
     {uid: 'uira', name: 'Uirá Porã', says: 'Vou abrir um chat no telegram'},
     {uid: 'mariaclaudiarosel', name: 'Maria Claudia Rossell', says: 'Viva Chavez!'},
     {uid: 'Anapipow', name: 'Ana Pessoa', says: 'Estamos em estado permanente de documentário'},
