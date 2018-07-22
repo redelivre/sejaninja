@@ -10,11 +10,14 @@ import main from './main'
 import logo from './img/seja-ninja.svg'
 
 const questions = [
-    {title: 'Cual e seu nome ?'},
-    {title: 'Onde mora ?'},
-    {title: 'En que area quer ajudar ?'},
-    {title: 'Cual e seu email ?'},
-    {title: 'Cuel e seu fone ?'}
+  {key: 'name', title: 'Como você se chama? '},
+  {key: 'email', title: 'Qual seu email?'},
+  {key: 'tel', title: 'Qual seu telefone? '},
+  {key: 'city', title: 'Qual cidade, estado, país você mora?'},
+  {key: 'profesion', title: 'O que você faz da vida?'},
+  {key: 'motivation', title: 'Pq vc quer ser NINJA?'},
+  {key: 'skills', title: 'Com o que você colaboraria?'},
+  {key: 'instagram', title: 'Compartilhe seu instagram'}
 ]
 
 
@@ -44,19 +47,28 @@ class Stepper extends React.PureComponent {
 }
 
 const FormWrapper = ({next, ...props}) => (
-    <EurekaForm id="contact" questions={questions} autoFocus={true}
-                onSubmit={next}
-    />)
+  <EurekaForm id='contact' questions={questions} autoFocus
+    onSubmit={next}
+  />
+)
+
+const SendData = ({next, args}) => {
+  const { name, city, area, email, phone } = args[1]
+
+  return (
+    <h1>VALEU <em>{name}</em> de <em>{city}</em>, te anotamos en nuestra lista de <em>{area}</em></h1>
+  )
+}
 
 const Details = () => (
     <div className="flex">
         <h1>Preencha seus dados para que possamos te conhecer
             melhor e entrar em contato</h1>
-        <Stepper>
-            <FormWrapper />
-            <h1>VALEU</h1>
-        </Stepper>
-    </div>
+    <Stepper>
+      <FormWrapper />
+      <SendData />
+    </Stepper>
+  </div>
 )
 
 class App extends Component {
