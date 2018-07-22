@@ -94,13 +94,13 @@ function initWebsocket () {
       decorator = new Decorator(game, world)
       game.decorator = decorator
       users = new Users(game, world)
-      var params = '?s=' + data.data.request.server
-      if (data.data.request.password) params += '&p=' + data.data.request.password
-      if (window.location.protocol != 'file:') {
-        window.history.replaceState(
-          data.data.request, data.data.request.server, window.location.pathname + params
-        )
-      }
+      //      var params = '?s=' + data.data.request.server
+      //      if (data.data.request.password) params += '&p=' + data.data.request.password
+      //        if (window.location.protocol != 'file:') {
+      //        window.history.replaceState(
+      //          data.data.request, data.data.request.server, window.location.pathname + params
+      //        )
+      //      }
       // return;
       // console.log('Initializing actors',data.data);
       game.setMaxListeners(Object.keys(userList).length + 50)
