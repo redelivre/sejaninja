@@ -14,7 +14,7 @@ function Beacon (x, y, z) {
     height: 2.5
   })
   // console.log('beacon:',this.position);
-  this.link = 'https://telegram.org'
+  this.link = 'https://t.me/midianinja'
   this.unWalkable = true
   var self = this
   this.on('draw', function (canvas) {
