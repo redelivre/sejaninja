@@ -57,7 +57,11 @@ const SendData = ({next, args}) => {
   const { name, city, area, email, phone } = args[1]
 
   return (
-    <h1>VALEU <em>{name}</em> de <em>{city}</em>, te anotamos en nuestra lista de <em>{area}</em></h1>
+    <h1>VALEU <em>{name}</em> de <em>{city}</em>, favor de
+    <button className='pink'>
+            Confirmar
+      </button>
+    </h1>
   )
 }
 
