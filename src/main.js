@@ -130,19 +130,19 @@ function initWebsocket () {
   }
 
   const hashCode = (s) => (
-      s.split("")
-          .reduce((a,b) => {a=((a<<2)-a)+b.charCodeAt(0);return a&a},0)%0xffffff)
-        .toString(16).padStart(6, '0')
+    s.split('')
+      .reduce((a, b) => { a = ((a << 2) - a) + b.charCodeAt(0); return a & a }, 0) % 0xffffff)
+    .toString(16).padStart(6, '0')
 
   const mockData = {
     type: 'server-join',
     data: {
       users: ninjas.reduce((acc, cur) => (Object.assign({
         [cur.uid]: {
-            username: '@' + cur.uid,
-            id: cur.uid,
-            link: 'https://twitter.com/' + cur.uid,
-            roleColor: '#' + hashCode(cur.uid)
+          username: '@' + cur.uid,
+          id: cur.uid,
+          link: 'https://twitter.com/' + cur.uid,
+          roleColor: '#' + hashCode(cur.uid)
         }
       }, acc)), {}),
       request: {}
@@ -150,24 +150,23 @@ function initWebsocket () {
   }
 
   const sendMessage = (ninja) => (
-      onData({
-          type: 'message',
-          data: {
-              uid: ninja.uid,
-              message: ninja.says,
-              channel: 'Ninja General'
-          }
-      })
+    onData({
+      type: 'message',
+      data: {
+        uid: ninja.uid,
+        message: ninja.says,
+        channel: 'Ninja General'
+      }
+    })
   )
-
 
   console.error(mockData)
   onData(mockData)
 
   setInterval(() => {
-      if (Math.random()*10 < 8) return
+    if (Math.random() * 10 < 8) return
 
-      sendMessage(util.pickInArray(ninjas))
+    sendMessage(util.pickInArray(ninjas))
   }, 500)
   setInterval(() => (onData({type: 'ping'})), 2000)
 
@@ -175,10 +174,10 @@ function initWebsocket () {
     var msg = message ? message.text : 'hello, test message yo!'
     var uid = message ? message.uid : users.actors[Object.keys(users.actors)[0]].uid
     var channel = message ? message.channel : '1'
-      /*ws.emit('data', JSON.stringify({ type: 'message',
+    /* ws.emit('data', JSON.stringify({ type: 'message',
       data: {
         uid: uid, message: msg, channel: channel
-      }}))*/
+      }})) */
   }
 }
 
