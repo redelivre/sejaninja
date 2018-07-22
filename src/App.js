@@ -177,7 +177,7 @@ class Stepper extends React.PureComponent {
 
 const Details = () => (
     <div className="flex">
-        <h1>Preencha seus dados praa que possamos te conhecer
+        <h1>Preencha seus dados para que possamos te conhecer
             melhor e entrar em contato</h1>
         <Register/>
     </div>
