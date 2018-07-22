@@ -43,11 +43,11 @@ body {
 }
 
 #hero img {
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
     position: fixed;
-    top: 10vh;
-    left: -10vw;
+    top: 10%;
+    left: -20%;
 }
 .nl-phase {
     transition: all 500ms ease-in-out;
