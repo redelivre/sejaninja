@@ -81,7 +81,7 @@ body {
 }
 
 .flex input {
-    color: white;
+    color: white!important;
 }
 
 @media only screen and (max-device-width: 480px) {
