@@ -12,8 +12,8 @@ function Input () {
   this.mouseRight = false
   this.mouseOut = false
   this.keys = {}
-  document.addEventListener('keydown', this.keydown.bind(this))
-  document.addEventListener('keyup', this.keyup.bind(this))
+//  document.addEventListener('keydown', this.keydown.bind(this))
+//  document.addEventListener('keyup', this.keyup.bind(this))
 }
 
 Input.prototype.bindCanvas = function (canvas) {

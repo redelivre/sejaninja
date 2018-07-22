@@ -96,7 +96,7 @@ Game.prototype.bindCanvas = function (canvas) {
   this.input.on('mouseup', this.mouseup.bind(this))
   this.input.on('mouseout', this.mouseout.bind(this))
   this.input.on('mouseover', this.mouseover.bind(this))
-  this.input.on('mousewheel', this.mousewheel.bind(this))
+//  this.input.on('mousewheel', this.mousewheel.bind(this))
 
   this.input.on('touchmove', this.touchmove.bind(this))
   this.input.on('touchstart', this.touchstart.bind(this))
