@@ -25,7 +25,7 @@ function Preloader (onComplete) {
     var image = new Image()
     image.addEventListener('load', this.onImageLoad.bind(this, image, name))
     image.src = uri
-    if (image.complete) this.onImageLoad(image, name)
+    //if (image.complete) this.onImageLoad(image, name)
   })
 }
 
