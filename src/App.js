@@ -62,8 +62,8 @@ const SendData = ({next, args}) => {
 }
 
 const Details = () => (
-    <div className="flex">
-        <h1>Preencha seus dados para que possamos te conhecer
+  <div className='flex'>
+    <h1>Preencha seus dados para que possamos te conhecer
             melhor e entrar em contato</h1>
     <Stepper>
       <FormWrapper />
@@ -73,17 +73,17 @@ const Details = () => (
 )
 
 class App extends Component {
-    render () {
-        return (
+  render () {
+    return (
 
-            <div className='App'>
-                <div id="hero">
-                    <img src={logo}/>
-                    <Details/>
-                </div>
+      <div className='App'>
+        <div id='hero'>
+          <img src={logo} />
+          <Details />
+        </div>
 
-            </div>)
-    }
+      </div>)
+  }
 }
 
 export default App
