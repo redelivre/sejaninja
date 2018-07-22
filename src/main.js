@@ -7,6 +7,7 @@ var Canvas = require('./script/engine/canvas.js')
 var UI = require('./script/ui/ui.js')
 var bs = require('browser-storage')
 var ninjas = require('./ninjas.js')
+var Konami = require ('konami')
 
 // TODO: Loading screen while preloading images, connecting to websocket, and generating world
 console.log('Loading...')
@@ -17,6 +18,8 @@ var game
 
 function initGame (images) {
   game = new Game({ step: 1000 / 60 })
+  game.konami = new Konami()
+  game.konami.load('http://midianinja.org')
   game.renderer = new Renderer({ game: game, images: images })
   var canvas = new Canvas({ id: 'main', game: game, initialScale: 2, backgroundColor: '#181213' })
   game.renderer.addCanvas(canvas)

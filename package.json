@@ -6,6 +6,7 @@
   "dependencies": {
     "browser-storage": "^0.0.2",
     "gh-pages": "^1.2.0",
+    "konami": "^1.6.2",
     "react": "^16.4.1",
     "react-autocomplete": "^1.8.1",
     "react-dom": "^16.4.1",
