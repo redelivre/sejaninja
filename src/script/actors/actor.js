@@ -232,6 +232,8 @@ Actor.prototype.move = function (x, y, z, absolute) {
 
 Actor.prototype.startTalking = function (message, channel, onStop) {
   this.talking = true
+  this.game.talking = this.sprite
+
   this.lastChannel = channel
   this.nametag.sprite.hidden = true
   this.messageBox = new TextBox(this, message, true)
@@ -240,6 +242,7 @@ Actor.prototype.startTalking = function (message, channel, onStop) {
   this.messageBox.scrollMessage(function () {
     delete self.messageBox
     self.talking = false
+    self.game.talking = null
     self.nametag.sprite.hidden = false
     self.updateSprite()
     self.emit('donetalking')
