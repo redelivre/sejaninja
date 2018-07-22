@@ -7,7 +7,7 @@ var Canvas = require('./script/engine/canvas.js')
 var UI = require('./script/ui/ui.js')
 var bs = require('browser-storage')
 var ninjas = require('./ninjas.js')
-var Konami = require ('konami')
+var Konami = require('konami')
 
 // TODO: Loading screen while preloading images, connecting to websocket, and generating world
 console.log('Loading...')
