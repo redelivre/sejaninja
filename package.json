@@ -1,8 +1,8 @@
 {
-  "name": "seja.midianinja.org",
+  "name": "sejaninja.org",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://foradoeixo.github.io/sejaninja",
+  "homepage": "https://sejaninja.org",
   "dependencies": {
     "browser-storage": "^0.0.2",
     "gh-pages": "^1.2.0",
