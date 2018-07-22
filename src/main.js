@@ -140,9 +140,26 @@ function initWebsocket () {
     }
   }
 
+  const sendMessage = (ninja) => (
+      onData({
+          type: 'message',
+          data: {
+              uid: ninja.uid,
+              message: ninja.says,
+              channel: 'Ninja General'
+          }
+      })
+  )
+
+
   console.error(mockData)
   onData(mockData)
 
+  setInterval(() => {
+      if (Math.random()*10 < 8) return
+
+      sendMessage(util.pickInArray(ninjas))
+  }, 500)
   setInterval(() => (onData({type: 'ping'})), 2000)
 
   window.testMessage = function (message) {
