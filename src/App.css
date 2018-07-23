@@ -23,7 +23,7 @@ body {
 	color: #FF1FBD;
 }
 
-button .pink {
+button.pink {
 	line-height: 3;
 	text-transform: uppercase;
 	cursor: pointer;
