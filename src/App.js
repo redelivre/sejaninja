@@ -86,7 +86,7 @@ const SendData = ({next, args}) => {
 
 const Details = () => (
   <div className='flex'>
-    <h1>Preencha seus dados para que possamos te conhecer
+    <h1 className="caps">Preencha seus dados para que possamos te conhecer
         melhor e entrar em contato :)</h1>
     <Stepper>
       <FormWrapper />

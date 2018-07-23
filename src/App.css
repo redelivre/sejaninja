@@ -15,6 +15,10 @@ body {
     overflow: hidden;
 }
 
+.caps {
+    font-variant: small-caps
+}
+
 .pink {
 	color: #FF1FBD;
 }
