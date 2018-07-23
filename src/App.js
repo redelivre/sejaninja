@@ -20,7 +20,7 @@ const questions = [
     {key: 'city', title: <span>Qual <Pink>cidade</Pink>, <Pink>estado</Pink>, <Pink>país</Pink> você vive?</span>},
     {key: 'motivation', title: <span>Você quer ser <Pink>ninja</Pink> porque...</span>},
     {key: 'skills', title: <span>E o que você gostaria de<Pink> fazer e colaborar</Pink>?</span>},
-    {key: 'instagram', title: <span>Manda seu <Pink>insta</Pink> pra gente colocar no mapa 8)</span>}
+    {key: 'instagram', title: <span>Manda seu <Pink>insta</Pink> pra gente colocar no mapa 8)</span>},
     {key: 'info', title: <span>Existe alguma <Pink>informação adicional</Pink> que nos gostaria de enviar?</span>}
 ]
 
