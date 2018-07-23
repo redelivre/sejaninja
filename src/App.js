@@ -15,7 +15,7 @@ const Pink = ({children}) => (
 
 const questions = [
     {key: 'name', title: <span>Como você se <Pink>chama</Pink>?</span>},
-    //  {key: 'email', title: 'Qual seu email?'},
+    {key: 'email', title: <span>Qual seu <Pink>email</Pink>?</span>},
     {key: 'tel', title: <span>Qual seu <Pink>fone</Pink>?</span>},
     {key: 'city', title: <span>Qual <Pink>cidade</Pink>, <Pink>estado</Pink>, <Pink>país</Pink> você mora?</span>},
     {key: 'activity', title: <span>O que você <Pink>faz da vida</Pink>?</span>},
