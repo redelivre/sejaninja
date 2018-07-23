@@ -10,7 +10,7 @@
     "react": "^16.4.1",
     "react-autocomplete": "^1.8.1",
     "react-dom": "^16.4.1",
-    "react-eureka": "^1.0.5",
+    "react-eureka": "xaiki/react-eureka-form",
     "react-scripts": "1.1.4",
     "websocket-stream": "^5.1.2"
   },
