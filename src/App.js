@@ -77,10 +77,10 @@ const SendData = ({next, args}) => {
   const url = `https://docs.google.com/forms/d/14F27ai-E3gaBKR3ca2KFcLiU-wrBEE8wDrsAoNa328o/viewform?${params}`
   return (
       <h1>Valeu <Pink>{name}</Pink> de <Pink>{city}</Pink>!
-      <button className='pink' onClick={() => window.open(url)}>
-          Confirme aqui seu cadastro
-    </button>
-    </h1>
+          <button className='pink' onClick={() => window.open(url)}>
+              Confirme aqui seu cadastro
+          </button>
+      </h1>
   )
 }
 
