@@ -14,14 +14,14 @@ const Pink = ({children}) => (
 )
 
 const questions = [
-    {key: 'name', title: <span>Como você se <Pink>chama</Pink>?</span>},
-    {key: 'email', title: <span>Qual seu <Pink>email</Pink>?</span>},
-    {key: 'tel', title: <span>Qual seu <Pink>fone</Pink>?</span>},
-    {key: 'city', title: <span>Qual <Pink>cidade</Pink>, <Pink>estado</Pink>, <Pink>país</Pink> você mora?</span>},
-    {key: 'activity', title: <span>O que você <Pink>faz da vida</Pink>?</span>},
-    {key: 'motivation', title: <span>Pq vc quer <Pink>ser NINJA</Pink>?</span>},
-    {key: 'skills', title: <span>Com o <Pink>que</Pink> você colaboraria?</span>},
-    {key: 'instagram', title: <span>Compartilhe seu <Pink>instagram</Pink></span>}
+    {key: 'name', title: <span>Nos diga seu <Pink>nome :)</Pink></span>},
+    {key: 'email', title: <span>Agora seu <Pink>email</Pink></span>},
+    {key: 'tel', title: <span>E <Pink>telefone</Pink></span>},
+    {key: 'city', title: <span>Qual <Pink>cidade</Pink>, <Pink>estado</Pink>, <Pink>país</Pink> você vive?</span>},
+    {key: 'motivation', title: <span>Você quer ser <Pink>ninja</Pink> porque...</span>},
+    {key: 'skills', title: <span>E o que você gostaria de<Pink> fazer e colaborar</Pink>?</span>},
+    {key: 'instagram', title: <span>Manda seu <Pink>insta</Pink> pra gente colocar no mapa 8)</span>}
+    {key: 'info', title: <span>Existe alguma <Pink>informação adicional</Pink> que nos gostaria de enviar?</span>}
 ]
 
 class Stepper extends React.PureComponent {
@@ -52,7 +52,7 @@ class Stepper extends React.PureComponent {
 
 const FormWrapper = ({next, ...props}) => (
     <div className='flex'>
-    <h1 className="caps">Preencha seus dados para que possamos te conhecer
+    <h1 className="caps">Responda estas 8 perguntinhas para que possamos te conhecer
             melhor e entrar em contato :)</h1>
         <EurekaForm id='contact' questions={questions} autoFocus
                     onSubmit={next}
@@ -68,7 +68,8 @@ const formMapping = {
   activity: 'entry.1340129654',
   motivation: 'entry.322372410',
   skills: 'entry.919281481',
-  instagram: 'entry.1348441891'
+  instagram: 'entry.1348441891',
+  info: 'entry.161867977'
 }
 
 const SendData = ({next, args}) => {
