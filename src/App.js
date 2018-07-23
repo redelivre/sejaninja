@@ -51,9 +51,13 @@ class Stepper extends React.PureComponent {
 }
 
 const FormWrapper = ({next, ...props}) => (
-  <EurekaForm id='contact' questions={questions} autoFocus
-    onSubmit={next}
-  />
+    <div className='flex'>
+    <h1 className="caps">Preencha seus dados para que possamos te conhecer
+            melhor e entrar em contato :)</h1>
+        <EurekaForm id='contact' questions={questions} autoFocus
+                    onSubmit={next}
+        />
+      </div>
 )
 
 const formMapping = {
@@ -74,25 +78,24 @@ const SendData = ({next, args}) => {
     .map(key => `${formMapping[key]}=${results[key]}`)
     .join('&')
 
+    console.error ('RESULTS', args)
   const url = `https://docs.google.com/forms/d/14F27ai-E3gaBKR3ca2KFcLiU-wrBEE8wDrsAoNa328o/viewform?${params}`
   return (
-      <h1>Valeu <Pink>{name}</Pink> de <Pink>{city}</Pink>!
-          <button className='pink' onClick={() => window.open(url)}>
-              Confirme aqui seu cadastro
-          </button>
-      </h1>
+      <div className='flex'>
+          <h1>Valeu <Pink>{name}</Pink> de <Pink>{city}</Pink>!
+              <button className='pink' onClick={() => window.open(url)}>
+                  Confirme aqui seu cadastro
+              </button>
+          </h1>
+      </div>
   )
 }
 
 const Details = () => (
-  <div className='flex'>
-    <h1 className="caps">Preencha seus dados para que possamos te conhecer
-        melhor e entrar em contato :)</h1>
     <Stepper>
-      <FormWrapper />
-      <SendData />
+        <FormWrapper />
+        <SendData />
     </Stepper>
-  </div>
 )
 
 class App extends Component {

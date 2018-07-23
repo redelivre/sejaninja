@@ -42,6 +42,7 @@ button.pink {
 #hero {
     position: fixed;
     height: auto;
+    width: 100%;
     margin: 0;
     padding: 5vw;
     z-index: 20;
