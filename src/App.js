@@ -9,15 +9,19 @@ import main from './main'
 
 import logo from './img/seja-ninja.svg'
 
+const Pink = ({children}) => (
+    <em className="pink">{children}</em>
+)
+
 const questions = [
-  {key: 'name', title: 'Como você se chama? '},
-  //  {key: 'email', title: 'Qual seu email?'},
-  {key: 'tel', title: 'Qual seu telefone? '},
-  {key: 'city', title: 'Qual cidade, estado, país você mora?'},
-  {key: 'activity', title: 'O que você faz da vida?'},
-  {key: 'motivation', title: 'Pq vc quer ser NINJA?'},
-  {key: 'skills', title: 'Com o que você colaboraria?'},
-  {key: 'instagram', title: 'Compartilhe seu instagram'}
+    {key: 'name', title: <p>Como você se <Pink>chama</Pink>?</p>},
+    //  {key: 'email', title: 'Qual seu email?'},
+    {key: 'tel', title: <p>Qual seu <Pink>fone</Pink>?</p>},
+    {key: 'city', title: <p>Qual <Pink>cidade</Pink>, <Pink>estado</Pink>, <Pink>país</Pink> você mora?</p>},
+    {key: 'activity', title: <p>O que você <Pink>faz da vida</Pink>?</p>},
+    {key: 'motivation', title: <p>Pq vc quer <Pink>ser NINJA</Pink>?</p>},
+    {key: 'skills', title: <p>Com o <Pink>que</Pink> você colaboraria?</p>},
+    {key: 'instagram', title: <p>Compartilhe seu <Pink>instagram</Pink></p>}
 ]
 
 class Stepper extends React.PureComponent {
