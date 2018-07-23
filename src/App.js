@@ -62,7 +62,7 @@ const FormWrapper = ({next, ...props}) => (
 
 const formMapping = {
   name: 'entry.276763906',
-  email: 'entry.2062246402',
+  email: 'entry.1364339574',
   tel: 'entry.1698681350',
   city: 'entry.884182261',
   activity: 'entry.1340129654',
