@@ -14,14 +14,14 @@ const Pink = ({children}) => (
 )
 
 const questions = [
-    {key: 'name', title: <p>Como você se <Pink>chama</Pink>?</p>},
+    {key: 'name', title: <span>Como você se <Pink>chama</Pink>?</span>},
     //  {key: 'email', title: 'Qual seu email?'},
-    {key: 'tel', title: <p>Qual seu <Pink>fone</Pink>?</p>},
-    {key: 'city', title: <p>Qual <Pink>cidade</Pink>, <Pink>estado</Pink>, <Pink>país</Pink> você mora?</p>},
-    {key: 'activity', title: <p>O que você <Pink>faz da vida</Pink>?</p>},
-    {key: 'motivation', title: <p>Pq vc quer <Pink>ser NINJA</Pink>?</p>},
-    {key: 'skills', title: <p>Com o <Pink>que</Pink> você colaboraria?</p>},
-    {key: 'instagram', title: <p>Compartilhe seu <Pink>instagram</Pink></p>}
+    {key: 'tel', title: <span>Qual seu <Pink>fone</Pink>?</span>},
+    {key: 'city', title: <span>Qual <Pink>cidade</Pink>, <Pink>estado</Pink>, <Pink>país</Pink> você mora?</span>},
+    {key: 'activity', title: <span>O que você <Pink>faz da vida</Pink>?</span>},
+    {key: 'motivation', title: <span>Pq vc quer <Pink>ser NINJA</Pink>?</span>},
+    {key: 'skills', title: <span>Com o <Pink>que</Pink> você colaboraria?</span>},
+    {key: 'instagram', title: <span>Compartilhe seu <Pink>instagram</Pink></span>}
 ]
 
 class Stepper extends React.PureComponent {
