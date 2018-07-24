@@ -13,17 +13,6 @@ const Pink = ({children}) => (
     <em className="pink">{children}</em>
 )
 
-const questions = [
-    {key: 'name', title: <span>Nos diga seu <Pink>nome :)</Pink></span>},
-    {key: 'email', title: <span>Agora seu <Pink>email</Pink></span>},
-    {key: 'tel', title: <span>E <Pink>telefone</Pink></span>},
-    {key: 'city', title: <span>Qual <Pink>cidade</Pink>, <Pink>estado</Pink>, <Pink>país</Pink> você vive?</span>},
-    {key: 'motivation', title: <span>Você quer ser <Pink>ninja</Pink> porque...</span>},
-    {key: 'skills', title: <span>E o que você gostaria de<Pink> fazer e colaborar</Pink>?</span>},
-    {key: 'instagram', title: <span>Manda seu <Pink>insta</Pink> pra gente colocar no mapa 8)</span>},
-    {key: 'info', title: <span>Existe alguma <Pink>informação adicional</Pink> que nos gostaria de enviar?</span>}
-]
-
 class Stepper extends React.PureComponent {
   constructor () {
     super()
@@ -50,15 +39,41 @@ class Stepper extends React.PureComponent {
   }
 }
 
-const FormWrapper = ({next, ...props}) => (
-    <div className='flex'>
-    <h1 className="caps">Responda estas 8 perguntinhas para que possamos te conhecer
-            melhor e entrar em contato :)</h1>
-        <EurekaForm id='contact' questions={questions} autoFocus
-                    onSubmit={next}
-        />
-      </div>
+
+class FormWrapper extends React.Component {
+    constructor () {
+        super ()
+        this.state = {
+            current: -1,
+            values: {}
+        }
+    }
+
+    render () {
+
+        const {next, ...props} = this.props
+        const {values, current} = this.state
+        const remaining = 8 - current -1
+        console.error ('state', this.state)
+        return (
+            <div className='flex'>
+                <h1 className="caps">Responda { remaining ? <span>estas {remaining} perguntinhas</span> : <span>esta ultima preguntinha</span> }  para que possamos te conhecer
+                    melhor e entrar em contato :</h1>)
+        <EurekaForm id='contact' autoFocus
+                    onSubmit={next} onUpdate={(state) => this.setState(state)}>
+            <span type='name'>Nos diga seu <Pink>nome :)</Pink></span>
+            <span type='email'>Hola <Pink>{values.name}</Pink>, agora seu <Pink>email</Pink></span>
+            <span type='tel'>E <Pink>telefone</Pink></span>
+            <span type='city'>Qual <Pink>cidade</Pink>, <Pink>estado</Pink>, <Pink>país</Pink> você vive?</span>
+            <span type='motivation'>Você quer ser <Pink>ninja</Pink> porque...</span>
+            <span type='skills'>E o que você gostaria de<Pink> fazer e colaborar</Pink>?</span>
+            <span type='instagram'>Manda seu <Pink>insta</Pink> pra gente colocar no mapa 8)</span>
+            <span type='info'>Existe alguma <Pink>informação adicional</Pink> que nos gostaria de enviar?</span>
+        </EurekaForm>
+            </div>
 )
+    }
+}
 
 const formMapping = {
   name: 'entry.276763906',
