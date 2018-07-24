@@ -87,9 +87,9 @@ class FormWrapper extends React.Component {
 }
 
 const formMapping = {
-  name: 'entry.276763906',
-  email: 'entry.1364339574',
-  tel: 'entry.1698681350',
+  name: 'prefill[full_name]',
+  email: 'prefill[email]',
+  tel: 'prefill[mobile]',
   city: 'entry.884182261',
   activity: 'entry.1340129654',
   motivation: 'entry.322372410',
@@ -105,8 +105,21 @@ const SendData = ({next, args = [null, {}]}) => {
     .map(key => `${formMapping[key]}=${results[key]}`)
     .join('&')
 
-  console.error('RESULTS', args)
-  const url = `https://docs.google.com/forms/d/14F27ai-E3gaBKR3ca2KFcLiU-wrBEE8wDrsAoNa328o/viewform?${params}`
+// bit.ly/PrefilledLogin - redelivre/login-cidadao
+//
+// GET /register/
+//             ?prefill[full_name]=Fulano+de+Tal
+//             &prefill[cpf]=12312312387
+//             &prefill[birthdate]=1901-01-01
+//             &prefill[mobile]=+5551987654321
+//             &prefill[email]=fulano@detal.net
+//
+// IT Works.
+// https://id.org.br/register/?prefill[full_name]=Fulano+de+Tal&prefill[mobile]=+5551987654321&prefill[email]=fulano@detal.net
+//
+  console.error ('RESULTS', args)
+  const url = `https://id.org.br/register/?${params}`
+
   return (
       <div className='flex'>
           <div>
