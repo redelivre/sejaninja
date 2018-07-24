@@ -1,12 +1,14 @@
 {
-  "main.css": "static/css/main.1ae8355f.css",
-  "main.css.map": "static/css/main.1ae8355f.css.map",
-  "main.js": "static/js/main.1805e619.js",
-  "main.js.map": "static/js/main.1805e619.js.map",
+  "main.css": "static/css/main.a35bd2fe.css",
+  "main.css.map": "static/css/main.a35bd2fe.css.map",
+  "main.js": "static/js/main.5913fdb8.js",
+  "main.js.map": "static/js/main.5913fdb8.js.map",
+  "static/media/ninja.svg": "static/media/ninja.4f4d64cf.svg",
   "static/media/nlicons.eot": "static/media/nlicons.7c0fb0e0.eot",
   "static/media/nlicons.svg": "static/media/nlicons.31460862.svg",
   "static/media/nlicons.ttf": "static/media/nlicons.a550120e.ttf",
   "static/media/nlicons.woff": "static/media/nlicons.b71a6776.woff",
+  "static/media/props.png": "static/media/props.22c4d4c1.png",
   "static/media/seja-ninja.svg": "static/media/seja-ninja.858dab86.svg",
   "static/media/static-tiles.png": "static/media/static-tiles.c155e49e.png"
 }
