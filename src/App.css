@@ -15,6 +15,11 @@ body {
     overflow: hidden;
 }
 
+.next.show {
+    transform: translateX(-30px)!important;
+    color: white!important;
+}
+
 .error-message {
     color: #dd1fbd!important;
 }
