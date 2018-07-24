@@ -17,7 +17,7 @@ module.exports = [
   {uid: 'jasminegiovannini', name: 'Jasmine giovannine', says: 'Gandaie-se!', link: 'https://www.instagram.com/jasminegiovannini/'},
   {uid: 'xaiki', name: 'Niv Sardi', says: 'É softwarelivre, caaaaara!', link: 'https://www.instagram.com/xaiki/'},
   {uid: 'uirapora', name: 'Uirá Porã', says: 'Vou abrir um chat no telegram', link: 'https://www.instagram.com/uirapora/'},
-  {uid: 'mariaclaudiarossell', name: 'Maria Claudia Rossell', says: 'Viva Chavez!', link: 'https://www.instagram.com/mariaclaudiarossell/'},
+  {uid: 'mariaclaudiarossell', name: 'Maria Claudia Rossell', says: 'América Latina va ser toda feminista!', link: 'https://www.instagram.com/mariaclaudiarossell/'},
   {uid: 'anapessoagg', name: 'Ana Pessoa', says: 'Estamos em estado permanente de documentário', link: 'https://www.instagram.com/anapessoagg/'},
   {uid: 'raissagal', name: 'Raissa Galvão', says: 'Vamos trocar a mídia de massa pela massa de mídias', link: 'https://www.instagram.com/raissagal/'},
   {uid: 'oliverninja', name: 'Oliver Kornblihtt', says: 'A vida é dura senador', link: 'https://www.instagram.com/oliverninja/ '},
