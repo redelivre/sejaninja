@@ -32,7 +32,7 @@ body {
 
 .rollingNumber li {
     display: block;
-    bottom: -24px;
+    bottom: -1.2em;
     right: -4px;
 }
 
