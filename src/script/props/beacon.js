@@ -58,10 +58,10 @@ Beacon.prototype.onUpdate = function () {
     y: this.game.centerMouseY - this.game.renderer.canvases[0].panning.panned.y
   }
   var metrics = this.sheet.map.main
-  if (mouse.x >= metrics.ox &&
-        mouse.x < metrics.w + metrics.ox &&
-        mouse.y >= metrics.oy &&
-        mouse.y < metrics.h + metrics.oy) {
+  if (mouse.x + 15 >= metrics.ox &&
+      mouse.x + 15 < metrics.w + metrics.ox &&
+      mouse.y + 40 >= metrics.oy &&
+      mouse.y + 40 < metrics.h + metrics.oy) {
     this.game.mouseOver = this
   } else if (this.game.mouseOver === this) {
     this.game.mouseOver = false
