@@ -2,7 +2,7 @@
   "name": "sejaninja.org",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sejaninja.org",
+  "homepage": "https://redelivre.github.io/sejaninja/",
   "dependencies": {
     "browser-storage": "^0.0.2",
     "gh-pages": "^1.2.0",
