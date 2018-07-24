@@ -108,21 +108,24 @@ const SendData = ({next, args = [null, {}]}) => {
   console.error('RESULTS', args)
   const url = `https://docs.google.com/forms/d/14F27ai-E3gaBKR3ca2KFcLiU-wrBEE8wDrsAoNa328o/viewform?${params}`
   return (
-    <div className='flex'>
-      <h1>Valeu <Pink>{name}</Pink> de <Pink>{city}</Pink>!
-        <button className='pink' onClick={() => window.open(url)}>
-                    Confirme aqui seu cadastro
-      </button>
-      </h1>
-      <div style={{flex: 2}}>
-        <img className='cube' src={cube} />
-        <h1>agora estamos conectados, <br />
-                    a partir do dia <Pink>10 de agosto</Pink> iniciaremos os contatos com
-                    cada um dos cadastrados, qualquer dúvida pode
-                    sempre entrar em <Pink>contato conosco</Pink>.</h1>
+      <div className='flex'>
+          <div>
+              <h1>Valeu <Pink>{name}</Pink> de <Pink>{city}</Pink>!</h1>
+              <button className='desktop pink' onClick={() => window.open(url)}>
+                  Confirme aqui seu cadastro
+              </button>
+          </div>
+          <div style={{flex: 2}}>
+              <img className='cube' src={cube} />
+              <h1>agora estamos conectados, <br />
+                  a partir do dia <Pink>10 de agosto</Pink> iniciaremos os
+                  contatos com cada um dos cadastrados, qualquer dúvida pode
+                  sempre entrar em <Pink>contato conosco</Pink>.</h1>
+          </div>
+          <button className='mobile pink' onClick={() => window.open(url)}>
+              Confirme aqui seu cadastro
+          </button>
       </div>
-
-    </div>
   )
 }
 

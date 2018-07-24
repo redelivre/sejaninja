@@ -137,7 +137,20 @@ button.pink {
     color: white!important;
 }
 
+.mobile {
+    display: none;
+}
+
 @media only screen and (max-device-width: 480px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: inherit;
+    }
+    #hero {
+        padding: 5vw 1vw;
+    }
     .flex {
         flex-direction: column;
     }
