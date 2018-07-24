@@ -117,7 +117,7 @@ const SendData = ({next, args = [null, {}]}) => {
           </div>
           <div style={{flex: 2}}>
               <img className='cube' src={cube} />
-              <h1>agora estamos conectados, <br />
+              <h1 className='connected'>agora estamos conectados, <br />
                   a partir do dia <Pink>10 de agosto</Pink> iniciaremos os
                   contatos com cada um dos cadastrados, qualquer dúvida pode
                   sempre entrar em <Pink>contato conosco</Pink>.</h1>

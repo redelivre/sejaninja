@@ -73,6 +73,7 @@ button.pink {
 	font-weight: bold;
 	letter-spacing: 3px;
     margin: 0 10px;
+    animation: slideInLeft 1s;
 }
 
 #hero {
@@ -93,6 +94,32 @@ button.pink {
     right: 5vw;;
     top: -15vw;
     z-index: -1;
+    animation: slideInRight 1s;
+}
+
+.connected {
+    animation: slideInRight 1s;
+}
+
+@-webkit-keyframes slideInRight {
+	from { -webkit-transform: translateX(100%); }
+	to { -webkit-transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+	from { -webkit-transform: translateX(100%); transform: translateX(100%); }
+	to { -webkit-transform: translateX(0); transform: translateX(0); }
+}
+
+
+@-webkit-keyframes slideInLeft {
+	from { -webkit-transform: translateX(-100%); }
+	to { -webkit-transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+	from { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+	to { -webkit-transform: translateX(0); transform: translateX(0); }
 }
 
 #hero img.sejalogo {
