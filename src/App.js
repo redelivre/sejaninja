@@ -39,6 +39,13 @@ class Stepper extends React.PureComponent {
   }
 }
 
+const Number = ({value}) => (
+    <ul className='questions show-next rollingNumber'>
+        <li className='next'    key={value + 1}>{value + 1}</li>
+        <li className='current' key={value}>{value}</li>
+        <li className='prev'    key={value - 1}>{value - 1}</li>
+    </ul>
+)
 
 class FormWrapper extends React.Component {
     constructor () {
@@ -53,12 +60,13 @@ class FormWrapper extends React.Component {
 
         const {next, ...props} = this.props
         const {values, current} = this.state
-        const remaining = 8 - current -1
+        const remaining = <Number value={8 - current - 1}/>
         console.error ('state', this.state)
         return (
             <div className='flex'>
-                <h1 className="caps">Responda { remaining ? <span>estas {remaining} perguntinhas</span> : <span>esta ultima preguntinha</span> }  para que possamos te conhecer
-                    melhor e entrar em contato :</h1>)
+                <h1 className="caps">Responda { 8 - current - 1 ? <span>estas {remaining} perguntinhas</span> : <span>esta ultima preguntinha</span> }
+                    para que possamos te conhecer melhor e entrar em contato :)
+                </h1>)
         <EurekaForm id='contact' autoFocus
                     onSubmit={next} onUpdate={(state) => this.setState(state)}>
             <span type='name'>Nos diga seu <Pink>nome :)</Pink></span>

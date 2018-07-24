@@ -15,6 +15,38 @@ body {
     overflow: hidden;
 }
 
+.error-message {
+    color: #dd1fbd!important;
+}
+
+.rollingNumber {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.rollingNumber li {
+    display: block;
+    bottom: -24px;
+    right: -4px;
+}
+
+.show-next.questions li.current,
+.show-next.questions li.next {
+	-webkit-animation: moveUpFromDown 0.4s both;
+	animation: moveUpFromDown 0.4s both;
+}
+
+@-webkit-keyframes moveUpFromDown {
+	from { -webkit-transform: translateY(100%); }
+	to { -webkit-transform: translateY(0); }
+}
+
+@keyframes moveUpFromDown {
+	from { -webkit-transform: translateY(100%); transform: translateY(100%); }
+	to { -webkit-transform: translateY(0); transform: translateY(0); }
+}
+
 .caps {
     font-variant: small-caps
 }
