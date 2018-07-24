@@ -64,7 +64,10 @@ class FormWrapper extends React.Component {
         console.error ('state', this.state)
         return (
             <div className='flex'>
-                <h1 className="caps">Responda { 8 - current - 1 ? <span>estas {remaining} perguntinhas</span> : <span>esta ultima preguntinha</span> }
+                <h1 className="caps">Responda {
+                    8 - current - 2
+                    ? <span>estas {remaining} perguntinhas </span>
+                    : <span>esta ultima preguntinha </span> }
                     para que possamos te conhecer melhor e entrar em contato :)
                 </h1>)
         <EurekaForm id='contact' autoFocus
