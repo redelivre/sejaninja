@@ -73,7 +73,7 @@ class FormWrapper extends React.Component {
         <EurekaForm id='contact' autoFocus
                     onSubmit={next} onUpdate={(state) => this.setState(state)}>
             <span type='name'>Nos diga seu <Pink>nome :)</Pink></span>
-            <span type='email'>Hola <Pink>{values.name}</Pink>, agora seu <Pink>email</Pink></span>
+            <span type='email'>Oi <Pink>{values.name}</Pink>, agora seu <Pink>email</Pink></span>
             <span type='tel'>E <Pink>telefone</Pink></span>
             <span type='city'>Qual <Pink>cidade</Pink>, <Pink>estado</Pink>, <Pink>país</Pink> você vive?</span>
             <span type='motivation'>Você quer ser <Pink>ninja</Pink> porque...</span>
