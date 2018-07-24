@@ -88,10 +88,10 @@ button.pink {
 }
 
 #hero img.cube {
-    height: 10vw;
-    position: fixed;
-    right: 0;
-    bottom: 0;
+    height: 20vw;
+    position: absolute;
+    right: 10vw;;
+    top: -13vw;
     z-index: -1;
 }
 

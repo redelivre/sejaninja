@@ -8,7 +8,7 @@ import './css/form.css'
 import main from './main'
 
 import logo from './img/seja-ninja.svg'
-import cube from './img/favicon-196.png'
+import cube from './img/sejaninja_ninja.png'
 
 const Pink = ({children}) => (
   <em className='pink'>{children}</em>
