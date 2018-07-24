@@ -60,7 +60,7 @@ function initWebsocket () {
       game.reset()
       game.renderer.clear()
       var userList = data.data.users
-      world = new World(game, Math.round(3.3 * Math.sqrt(Object.keys(userList).length)))
+      world = new World(game, Math.round(1/64* Math.sqrt(Object.keys(userList).length)))
       decorator = new Decorator(game, world)
       game.decorator = decorator
       users = new Users(game, world)
