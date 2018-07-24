@@ -8,9 +8,10 @@ import './css/form.css'
 import main from './main'
 
 import logo from './img/seja-ninja.svg'
+import cube from './img/favicon-196.png'
 
 const Pink = ({children}) => (
-    <em className="pink">{children}</em>
+  <em className='pink'>{children}</em>
 )
 
 class Stepper extends React.PureComponent {
@@ -40,50 +41,49 @@ class Stepper extends React.PureComponent {
 }
 
 const Number = ({value}) => (
-    <ul className='questions show-next rollingNumber'>
-        <li className='next'    key={value + 1}>{value + 1}</li>
-        <li className='current' key={value}>{value}</li>
-        <li className='prev'    key={value - 1}>{value - 1}</li>
-    </ul>
+  <ul className='questions show-next rollingNumber'>
+    <li className='next' key={value + 1}>{value + 1}</li>
+    <li className='current' key={value}>{value}</li>
+    <li className='prev' key={value - 1}>{value - 1}</li>
+  </ul>
 )
 
 class FormWrapper extends React.Component {
-    constructor () {
-        super ()
-        this.state = {
-            current: -1,
-            values: {}
-        }
+  constructor () {
+    super()
+    this.state = {
+      current: -1,
+      values: {}
     }
+  }
 
-    render () {
-
-        const {next, ...props} = this.props
-        const {values, current} = this.state
-        const remaining = <Number value={8 - current - 1}/>
-        console.error ('state', this.state)
-        return (
-            <div className='flex'>
-                <h1 className="caps">Responda {
-                    8 - current - 2
-                    ? <span>estas {remaining} perguntinhas </span>
-                    : <span>esta ultima preguntinha </span> }
-                    para que possamos te conhecer melhor e entrar em contato :)
-                </h1>)
+  render () {
+    const {next, ...props} = this.props
+    const {values, current} = this.state
+    const remaining = <Number value={8 - current - 1} />
+    console.error('state', this.state)
+    return (
+      <div className='flex'>
+        <h1 className='caps'>Responda {
+          8 - current - 2
+            ? <span>estas {remaining} perguntinhas </span>
+            : <span>esta ultima preguntinha </span> }
+                para que possamos te conhecer melhor e entrar em contato :)
+        </h1>)
         <EurekaForm id='contact' autoFocus
-                    onSubmit={next} onUpdate={(state) => this.setState(state)}>
-            <span type='name'>Nos diga seu <Pink>nome :)</Pink></span>
-            <span type='email'>Oi <Pink>{values.name}</Pink>, agora seu <Pink>email</Pink></span>
-            <span type='tel'>E <Pink>telefone</Pink></span>
-            <span type='city'>Qual <Pink>cidade</Pink>, <Pink>estado</Pink>, <Pink>país</Pink> você vive?</span>
-            <span type='motivation'>Você quer ser <Pink>ninja</Pink> porque...</span>
-            <span type='skills'>E o que você gostaria de<Pink> fazer e colaborar</Pink>?</span>
-            <span type='instagram'>Manda seu <Pink>insta</Pink> pra gente colocar no mapa 8)</span>
-            <span type='info'>Existe alguma <Pink>informação adicional</Pink> que nos gostaria de enviar?</span>
+          onSubmit={next} onUpdate={(state) => this.setState(state)}>
+          <span type='name'>Nos diga seu <Pink>nome :)</Pink></span>
+          <span type='email'>Oi <Pink>{values.name}</Pink>, agora seu <Pink>email</Pink></span>
+          <span type='tel'>E <Pink>telefone</Pink></span>
+          <span type='city'>Qual <Pink>cidade</Pink>, <Pink>estado</Pink>, <Pink>país</Pink> você vive?</span>
+          <span type='motivation'>Você quer ser <Pink>ninja</Pink> porque...</span>
+          <span type='skills'>E o que você gostaria de<Pink> fazer e colaborar</Pink>?</span>
+          <span type='instagram'>Manda seu <Pink>insta</Pink> pra gente colocar no mapa 8)</span>
+          <span type='info'>Existe alguma <Pink>informação adicional</Pink> que nos gostaria de enviar?</span>
         </EurekaForm>
-            </div>
-)
-    }
+      </div>
+    )
+  }
 }
 
 const formMapping = {
@@ -98,31 +98,39 @@ const formMapping = {
   info: 'entry.161867977'
 }
 
-const SendData = ({next, args}) => {
+const SendData = ({next, args = [null, {}]}) => {
   const [element, results] = args
   const { name, city, area, email, phone } = results
   const params = Object.keys(results)
     .map(key => `${formMapping[key]}=${results[key]}`)
     .join('&')
 
-    console.error ('RESULTS', args)
+  console.error('RESULTS', args)
   const url = `https://docs.google.com/forms/d/14F27ai-E3gaBKR3ca2KFcLiU-wrBEE8wDrsAoNa328o/viewform?${params}`
   return (
-      <div className='flex'>
-          <h1>Valeu <Pink>{name}</Pink> de <Pink>{city}</Pink>!
-              <button className='pink' onClick={() => window.open(url)}>
-                  Confirme aqui seu cadastro
-              </button>
-          </h1>
+    <div className='flex'>
+      <h1>Valeu <Pink>{name}</Pink> de <Pink>{city}</Pink>!
+        <button className='pink' onClick={() => window.open(url)}>
+                    Confirme aqui seu cadastro
+      </button>
+      </h1>
+      <div style={{flex: 2}}>
+        <img className='cube' src={cube} />
+        <h1>agora estamos conectados, <br />
+                    a partir do dia <Pink>10 de agosto</Pink> iniciaremos os contatos com
+                    cada um dos cadastrados, qualquer dúvida pode
+                    sempre entrar em <Pink>contato conosco</Pink>.</h1>
       </div>
+
+    </div>
   )
 }
 
 const Details = () => (
-    <Stepper>
-        <FormWrapper />
-        <SendData />
-    </Stepper>
+  <Stepper>
+    <FormWrapper />
+    <SendData />
+  </Stepper>
 )
 
 class App extends Component {
@@ -131,7 +139,7 @@ class App extends Component {
 
       <div className='App'>
         <div id='hero'>
-          <img src={logo} />
+          <img className='sejalogo' src={logo} />
           <Details />
         </div>
 

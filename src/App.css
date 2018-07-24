@@ -88,7 +88,15 @@ button.pink {
     bottom: 0;
 }
 
-#hero img {
+#hero img.cube {
+    height: 10vw;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#hero img.sejalogo {
     width: 80%;
     height: 80%;
     position: fixed;
